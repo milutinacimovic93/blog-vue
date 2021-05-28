@@ -3,11 +3,11 @@
         <form @submit.prevent="add">
             <div>
                 <label name="title">Title</label>
-                <input type="text" name="title" placeholder="Title" v-model="newPost.title" required />
+                <input type="text" name="title" placeholder="Title" v-model="newPost.title" minlength="2" required />
             </div>
             <div>
                 <label>Text</label>
-                <textarea rows="3" v-model="newPost.text"></textarea>
+                <textarea rows="3" v-model="newPost.text" maxlength="300"></textarea>
             </div>
             <div>
                 <button type="submit" class="btn btn-primary">Add Post</button>
