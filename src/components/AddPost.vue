@@ -12,6 +12,9 @@
             <div>
                 <button type="submit" class="btn btn-primary">Add Post</button>
             </div>
+            <div> 
+                <button @click="reset" class="btn btn-primary">Reset</button>
+            </div>
         </form>
     </div>
 </template>
@@ -34,6 +37,10 @@
                     name: "Posts"
                 });
             },
+            reset() {
+                (this.newPost.title = ""), 
+                (this.newPost.text = "");
+            }
         },
     }
 </script>
